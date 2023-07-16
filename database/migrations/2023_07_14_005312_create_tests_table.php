@@ -17,13 +17,14 @@ return new class extends Migration
             $table->id();
 
             $table->string('azienda') -> unique();
-            $table->string('stazione di partenza') -> nullable();
-            $table->string('stazione di arrivo') -> nullable();
-            $table->time('orario di partenza') -> nullable();
-            $table->time('orario di arrivo') -> nullable();
-            $table->string('codice treno') -> unique();
-            $table->string('Numero carrozze') -> nullable();
-            $table->string('Numero carrozze') -> nullable();
+            $table->string('stazione_di_partenza') -> nullable();
+            $table->string('stazione_di_arrivo') -> nullable();
+            $table->time('orario_di_partenza') -> nullable();
+            $table->time('orario_di_arrivo') -> nullable();
+            $table->string('codice_treno') -> unique();
+            $table->integer('numero_carrozze') -> nullable();
+            $table->boolean('in_time') -> default(true);
+            $table->boolean('deleted') -> default(false);
 
 
 
